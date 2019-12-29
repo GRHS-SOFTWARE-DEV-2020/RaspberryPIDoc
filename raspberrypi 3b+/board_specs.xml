@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<raspberrypi>
+
+	<name>RaspberryPi 3b+</name>
+	
+	<alias>RSP3B+</alias>
+	
+	<price>35</price> 
+
+	<release>
+		<day>14</day>
+		<month>3</month>
+		<year>2018</year>
+	</release>
+	
+	<obsolescence>
+		<day>0</day>
+		<month>1</month>
+		<year>2023</year>
+	</obsolescence>
+
+	<instruction_set docf="arch_ARMv8-A">
+		<name>ARMv8-A</name>
+		<width>64</width>
+		<width>32</width>
+	</instruction_set>
+
+	<soc docf="soc_Broadcom BCM 2837 b0">
+		<name>Broadcom BCM 2837 b0</name>
+	</soc>
+
+	<fpu docf="fpu_VFPv4">
+		<ysup>NEON</ysup>
+	</fpu>
+
+	<cpu docf="cpu_Cortex-A53">
+		<count>4</count>
+		<name>Cortex-A53</name>
+		<clkMHz>1400</clkMHz>
+	</cpu>
+
+	<gpu docf="gpu_Broadcom VideoCore IV">
+		<name>Broadcom VideoCore IV</name>
+		<clkMHz type="3d">300</clkMHz>
+		<clkMHz type="video">400</clkMHz>
+		<openGL>2.0</openGL>
+		<gflops>28.8</gflops>
+		<resolution>1080p60</resolution>
+
+		<ysup docf="vcform_MPEG-2">
+			<name>MPEG-2</name>
+			<type>video encoding</type>
+			<need_license>false</need_license>
+		</ysup>
+
+		<ysup docf="vcform_VC-1">
+			<name>VC-1</name>
+			<type>video encoding</type>
+			<need_license>true</need_license>
+		</ysup>
+
+		<ysup docf="vcform_H.264/MPEG-4 AVC">
+			<name>AVC</name>
+			<type>video compression</type>
+			<need_license>true</need_license>
+		</ysup>
+
+	</gpu>
+	
+	<memory>
+		<amount>1</amount>
+		<unit>GB</unit>
+	</memory>
+
+	<usb2 sup="true" docf="int_USB 2.0">
+		<set>
+			<count>4</count>
+			<location>USB hub</location>
+		</set>
+	</usb2>
+
+	<usb3 sup="false" docf="int_USB 3.0"></usb3>
+
+	<video_input sup="true" docf="int_MIPI Camera Interface (CSI)">
+		<count>1</count>
+	</video_input>
+
+	<video_output sup="true">
+		<port docf="int_HDMI (rev 1.3)">
+			<format>HDMI 1.3</format>
+			<count>1</count>
+			<usage>video + audio transmit</usage>
+		</port>
+
+		<port docf="int_MIPI Display Interface (DSI)">
+			<format>DSI</format>
+			<count>1</count>
+			<usage>raw lcd</usage>
+		</port>
+
+		<port docf="int_CTIA style TRRS jack">
+			<format>TRRS Jack</format>
+			<count>1</count>
+			<usage>composite video</usage>
+		</port>
+	</video_output>
+
+	<audio_input sup="true">I2S</audio_input>
+
+	<audio_output sup="true">
+		<analog>3.5mm Jack</analog>
+		<digital>HDMI</digital>
+		<digital>I2S</digital>
+	</audio_output>
+
+	<on_board_storage sup="true">
+		<type doc_f="mem_MicroSDHC">
+			<name>MicroSD</name>
+			<max_size>0</max_size>
+			<builtin>false</builtin>
+		</type>
+		<type doc_f="mem_USB Boot Mode">
+			<name>USBbootmode</name>
+			<max_size>0</max_size>
+			<builtin>false</builtin>
+		</type>
+	</on_board_storage>
+
+	<ethernet sup="true" docf="int_Ethernet 8P8C">
+		<baudMB>10</baudMB>
+		<baudMB>100</baudMB>
+		<baudMB>1000</baudMB>
+		<maxBaudMB>300</maxBaudMB>
+	</ethernet>
+
+	<wireless sup="true" docf="int_WIFI IEE 802.11 wireless">
+		<band>b/g/n/ac dual</band>
+		<frqGHz>2.4</frqGHz>
+		<frqGHz>5</frqGHz>
+	</wireless>
+
+	<bluetooth sup="true" docf="int_Bluetooth">
+		<spec>4.2 LS BLE</spec>
+	</bluetooth>
+
+	<low_level_peripherals>
+		<peripheral doc_f="n/a">
+			<name>GPIO</name>
+			<count>17</count>
+		</peripheral>
+
+		<peripheral doc_f="prot_UART">
+			<name>UART</name>
+			<count>1</count>
+		</peripheral>
+
+		<peripheral doc_f="prot_I2C">
+			<name>I2C</name>
+			<count>1</count>
+		</peripheral>
+
+		<peripheral doc_f="prot_SPI">
+			<name>SPI</name>
+			<count>2</count>
+		</peripheral>
+
+		<peripheral doc_f="prot_I2S">
+			<name>I2S</name>
+			<count>1</count>
+		</peripheral>
+
+		<peripheral doc_f="prot_HAT ID">
+			<name>HAT ID</name>
+			<count>1</count>
+		</peripheral>
+
+		<peripheral doc_f="n/a">
+			<name>VCC 3.3</name>
+			<count>1</count>
+		</peripheral>
+
+		<peripheral doc_f="n/a">
+			<name>VCC 5</name>
+			<count>1</count>
+		</peripheral>
+
+		<peripheral doc_f="n/a">
+			<name>GND</name>
+			<count>1</count>
+		</peripheral>
+
+	</low_level_peripherals>
+
+</raspberrypi>
