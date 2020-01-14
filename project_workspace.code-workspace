@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "arm"
+		},
+		{
+			"path": "boards"
+		},
+		{
+			"path": "cpu"
+		},
+		{
+			"path": "device tree"
+		},
+		{
+			"path": "fpu"
+		},
+		{
+			"path": "gpu"
+		},
+		{
+			"path": "soc"
+		},
+		{
+			"path": "tools"
+		}
+	]
+}
